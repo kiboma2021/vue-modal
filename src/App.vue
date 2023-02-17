@@ -6,7 +6,7 @@
   <button @click="addClass">Click me</button>
 </div>
 
-<Modal header="modal heading here" />
+<Modal header="modal heading here" secondheader="Getting exhausted"/>
 
 </template>
 

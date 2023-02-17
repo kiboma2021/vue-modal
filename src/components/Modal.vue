@@ -1,9 +1,10 @@
 <template>
     <h1>{{header}}</h1>
+    <p>{{ secondheader }}</p>
 </template>
 <script>
 export default {
-    props: ['header',]
+    props: ['header','secondheader']
 }
 </script>
 
