@@ -1,5 +1,5 @@
 <template>
-<h1>Restarting my template :(</h1>
+<h1>{{title}}</h1>
 </template>
 
 <script>
@@ -7,7 +7,13 @@
 export default {
   name: 'App',
 
+  data(){
+  return {
+    title: 'Restarting my template :)',
+  }
 }
+}
+
 </script>
 
 <style>
@@ -18,5 +24,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1{
+  color: red;
 }
 </style>
