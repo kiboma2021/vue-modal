@@ -9,7 +9,7 @@
 <button type="button" @click="toggleModal" >Open Modal</button>
 
 <div v-if="showModal" >
-  <Modal class="myModal" @close="toggleModal">
+  <Modal class="myModal" @close="toggleModal" theme="theme">
     <div class="m-head">
       <h1>{{header}}</h1>
       <span>X</span>
@@ -35,6 +35,7 @@ export default {
     showModal: false,
     header: 'Modal heading',
     subheader: 'Modal subheading',
+    theme: 'machakos',
   }
 },
 methods: { 
