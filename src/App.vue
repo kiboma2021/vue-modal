@@ -6,7 +6,7 @@
   <button @click="addClass">Click me</button>
 </div>
 
-<Modal header="modal heading here" secondheader="Getting exhausted"/>
+<Modal class="modalPopup" header="modal heading here" secondheader="Getting exhausted"/>
 
 </template>
 
@@ -55,4 +55,5 @@ h1{
 .name {
   background-color: greenyellow;
 }
+
 </style>
