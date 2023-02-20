@@ -4,10 +4,22 @@
 <div class="inputform">
   <input type="text" ref="name" />
   <button @click="addClass">Click me</button>
+</div><br><br>
+
+<button type="button" @click="toggleModal" >Open Modal</button>
+
+<div v-if="showModal" >
+  <Modal class="myModal" @close="toggleModal">
+    <div class="m-head">
+      <h1>{{header}}</h1>
+      <span>X</span>
+    </div>
+    <input type="char">
+    
+    <p>{{subheader}}</p> <br><br>
+    <button @click="closeModal">Close Modal</button>
+  </Modal>
 </div>
-
-<Modal class="modalPopup" header="modal heading here" secondheader="Getting exhausted"/>
-
 </template>
 
 <script>
@@ -20,6 +32,9 @@ export default {
   data(){
   return {
     title: 'Restarting my template :)',
+    showModal: false,
+    header: 'Modal heading',
+    subheader: 'Modal subheading',
   }
 },
 methods: { 
@@ -28,6 +43,10 @@ methods: {
     this.$refs.name.classList='name'
     this.$refs.name.focus()
     this.$refs.motto.innerHTML="Hapinned as usual"
+  },
+  toggleModal(){
+    console.log('clicked');
+    this.showModal = !this.showModal
   }
 }
 }
@@ -56,4 +75,8 @@ h1{
   background-color: greenyellow;
 }
 
+.m-head {
+  display: flex;
+  justify-content: space-between;
+}
 </style>
