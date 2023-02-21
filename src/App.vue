@@ -9,7 +9,7 @@
 <button type="button" @click.shift="toggleModal" >Open Modal(shift)</button>
 
 <div v-if="showModal" >
-  <Modal class="myModal" @close="toggleModal" theme="theme">
+  <Modal class="myModal" @close="toggleModal" theme="sale">
     <div class="m-head">
       <h1>{{header}}</h1>
       <span>X</span>

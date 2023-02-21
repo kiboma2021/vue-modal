@@ -1,12 +1,13 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
-        <div class="modal">
+        <div class="modal" :class="{sale: theme=='sale'}">
             <slot></slot>  
         </div>
     </div>
 </template>
 <script>
 export default {
+    props: ['theme'],
     methods: {
         closeModal(){
             this.$emit('close')
@@ -31,5 +32,10 @@ export default {
     height: 100%;
     background: rgba(0, 0, 0, 0.507);
     position: fixed;
+}
+
+.modal.sale {
+    background-color: greenyellow;
+    color: black;
 }
 </style>
