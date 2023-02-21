@@ -6,7 +6,7 @@
   <button @click="addClass">Click me</button>
 </div><br><br>
 
-<button type="button" @click="toggleModal" >Open Modal</button>
+<button type="button" @click.shift="toggleModal" >Open Modal(shift)</button>
 
 <div v-if="showModal" >
   <Modal class="myModal" @close="toggleModal" theme="theme">
@@ -17,7 +17,7 @@
     <input type="char">
     
     <p>{{subheader}}</p> <br><br>
-    <button @click="closeModal">Close Modal</button>
+    <button>Close Modal</button>
   </Modal>
 </div>
 </template>
